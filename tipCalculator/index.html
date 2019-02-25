@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tip calculator</h1>
+      <div id="container-input">
+        <p>Please enter the total amount of bill</p>
+        <p>
+          $
+          <input
+            id="billamt"
+            type="text"
+            value="100"
+            placeholder="Bill Amount"
+          />
+        </p>
+
+        <!-- Adding the VUE element slider -->
+        <div id="app">
+          <p>
+            %<input
+              type="number"
+              v-model="myNumber"
+              id="myNumber"
+              placeholder="Tip Percent"
+            />
+          </p>
+          <input type="range" v-model="myNumber" min="0" max="30" />
+        </div>
+      </div>
+      <p><button type="button" id="calculate">Calculate!</button></p>
+
+      <!-- RESULTS -->
+      <div id="results">
+        <div>
+          <span>Tip amount</span>
+          <input type="number" id="tipAmount" disabled />
+        </div>
+        <div>
+          <span class="input-group-addon">Total Bill with Tip</span>
+          <input
+            type="number"
+            class="form-control"
+            id="totalBillWithTip"
+            disabled
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
