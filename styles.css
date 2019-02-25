@@ -1,8 +1,21 @@
 body {
   font-family: "Roboto", sans-serif;
   text-align: center;
+  background: -webkit-linear-gradient(to left, #5433ff, #20bdff, #a5fecb);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #5433ff, #20bdff, #a5fecb);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 h1 {
   font-weight: bold;
+  font-size: 50px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin: 0 0 10px 0;
 }
