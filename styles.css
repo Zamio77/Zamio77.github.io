@@ -5,6 +5,7 @@ body {
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #5433ff, #20bdff, #a5fecb);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 0px;
 }
 
 h1 {
@@ -18,4 +19,15 @@ ul {
 
 li {
   margin: 0 0 10px 0;
+}
+
+.container {
+  margin-bottom: 100px;
+  margin-top: 25px;
+  text-align: center;
+  color: white;
+  border-radius: 9px;
+  background: url("graniteBackground.jpg") repeat-x;
+  box-shadow: 2px 2px 12px hsla(105, 41%, 32%, 0.72);
+  padding-top: 39px;
 }
