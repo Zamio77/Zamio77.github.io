@@ -11,17 +11,16 @@ function calculateTip() {
   tipPercentNum = tipPercentNum / 100;
   let tip = billAmtNum * tipPercentNum;
   console.log(tip);
-  let total = tip + billAmtNum;
+  let tipAmt = Math.ceil(tip);
+  console.log(tipAmt);
+  let total = tipAmt + billAmtNum;
   // total = Math.round(total * 100) / 100;
   console.log(total);
 
-  let tipAmount = document.querySelector("#tipAmount");
-  let totalBillWithTip = document.querySelector("#totalBillWithTip");
-
-  tipAmount.value = Math.ceil(tip).toFixed(2);
-  totalBillWithTip.value = Math.ceil(total).toFixed(2);
-
   document.getElementById("results").style.display = "block";
+
+  document.getElementById("tipAmount").innerHTML = tipAmt;
+  document.getElementById("totalBillWithTip").innerHTML = total;
 }
 
 // Add the range slider and calculate using VUE
