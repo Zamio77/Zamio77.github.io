@@ -11,9 +11,11 @@ function calculateTip() {
   tipPercentNum = tipPercentNum / 100;
   let tip = billAmtNum * tipPercentNum;
   console.log(tip);
+  // Rounding to the second decimal point
   let tipAmt = Math.round(tip * 100) / 100;
   console.log(tipAmt);
   let total = tipAmt + billAmtNum;
+  // Rounding to the second decimal point
   totalAmt = Math.round(total * 100) / 100;
   console.log(total);
 
