@@ -20,6 +20,8 @@ let searchText = document.getElementById("search-txt");
 
 function getWeather() {
   return fetch(
+    // Chrome requires HTTPS connections but openweather api, the free version, comes through as HTTP
+    // added 'https://crossorigin.me/ to the api call to fix.
     `https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?zip=${
       searchText.value
     }&units=${units}&appid=3c9639b2d937cc613e77cf142beccbe4`
