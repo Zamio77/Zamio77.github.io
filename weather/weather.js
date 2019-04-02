@@ -16,6 +16,10 @@ tempButton.addEventListener("click", function() {
     getWeather();
   }
 });
+
+let icon_src = "./Icons/animated/day.svg";
+let icon_element = document.getElementById("icon");
+icon_element.src = icon_src;
 let searchText = document.getElementById("search-txt");
 
 function getWeather() {
