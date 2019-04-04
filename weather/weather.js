@@ -13,7 +13,7 @@ function getWeather() {
       // added 'https://cors-anywhere.herokuapp.com/' to the api call to fix.
       `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?zip=${
       searchText.value
-    }&units=${units}&appid=3c9639b2d937cc613e77cf142beccbe4`
+      }&units=${units}&appid=3c9639b2d937cc613e77cf142beccbe4`
     )
     .then(response => response.json())
     .then(function (data) {
