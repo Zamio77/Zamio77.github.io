@@ -10,7 +10,7 @@ let icon_src = "";
 function getWeather() {
   return fetch(
       // Chrome requires HTTPS connections but openweather api, the free version, comes through as HTTP
-      // added 'https://crossorigin.me/ to the api call to fix.
+      // added 'https://cors-anywhere.herokuapp.com/' to the api call to fix.
       `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?zip=${
       searchText.value
     }&units=${units}&appid=3c9639b2d937cc613e77cf142beccbe4`
