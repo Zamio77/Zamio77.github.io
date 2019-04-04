@@ -7,9 +7,6 @@ let tempButton = document.getElementById("tempunit");
 let searchText = document.getElementById("search-txt");
 let icon_src = "";
 
-
-
-
 function getWeather() {
   return fetch(
       // Chrome requires HTTPS connections but openweather api, the free version, comes through as HTTP
