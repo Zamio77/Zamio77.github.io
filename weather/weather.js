@@ -4,12 +4,11 @@ let celUnit = "C";
 let units = "imperial";
 let searchButton = document.getElementById("search-btn");
 let tempButton = document.getElementById("tempunit");
-
-
-let icon_src = "./Icons/animated/day.svg";
-let icon_element = document.getElementById("icon");
-icon_element.src = icon_src;
 let searchText = document.getElementById("search-txt");
+let icon_src = "";
+
+
+
 
 function getWeather() {
   return fetch(
@@ -29,6 +28,10 @@ function getWeather() {
       let main = data.weather[0].main;
       document.getElementById("main").innerHTML = main;
       console.log(temp);
+
+      let weatherId = data.weather[0].id;
+      console.log(weatherId);
+      weatherIcon(weatherId);
     })
     .catch(error => console.error(`Error: ${error}`));
 }
@@ -49,3 +52,22 @@ tempButton.addEventListener("click", function () {
     getWeather();
   }
 });
+
+// Setup the weather icon function
+function weatherIcon(weatherCondition) {
+
+  if (weatherCondition >= 200 && weatherCondition <= 232) {
+    icon_src = "./Icons/animated/thunder.svg"
+  } else if (weatherCondition >= 300 && weatherCondition <= 531) {
+    icon_src = "./Icons/animated/rainy-1.svg"
+  } else if (weatherCondition >= 600 && weatherCondition <= 622) {
+    icon_src = "./Icons/animated/snowy-1.svg"
+  } else if (weatherCondition === 800) {
+    icon_src = "./Icons/animated/day.svg"
+  } else {
+    icon_src = "./Icons/animated/cloudy-day-1.svg"
+  }
+
+  let icon_element = document.getElementById("icon");
+  icon_element.src = icon_src;
+}
