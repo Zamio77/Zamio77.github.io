@@ -9,16 +9,16 @@ let icon_src = "";
 
 function getWeather() {
   return fetch(
-      // Chrome requires HTTPS connections but openweather api, the free version, comes through as HTTP
-      // added 'https://cors-anywhere.herokuapp.com/' to the api call to fix.
-      `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?zip=${
+    // Chrome requires HTTPS connections but openweather api, the free version, comes through as HTTP
+    // added 'https://cors-anywhere.herokuapp.com/' to the api call to fix.
+    `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?zip=${
       searchText.value
-      }&units=${units}&appid=3c9639b2d937cc613e77cf142beccbe4`
-    )
+    }&units=${units}&appid=3c9639b2d937cc613e77cf142beccbe4`
+  )
     .then(response => response.json())
-    .then(function (data) {
+    .then(data => {
       // Begin accessing JSON data here
-      let location = data.name + ", " + data.sys.country;
+      let location = `${data.name}, ${data.sys.country}`;
       document.getElementById("location").innerHTML = location;
       let temp = data.main.temp + degree;
       document.getElementById("temp").innerHTML = temp;
@@ -37,13 +37,13 @@ function getWeather() {
 searchButton.addEventListener("click", getWeather);
 
 // Setup the TempButton
-tempButton.addEventListener("click", function () {
+tempButton.addEventListener("click", function() {
   if (tempButton.innerHTML === "F") {
     units = "metric";
     tempButton.innerHTML = celUnit;
     getWeather();
-  } else // (tempButton.innerHTML === "C") 
-  {
+  } // (tempButton.innerHTML === "C")
+  else {
     units = "imperial";
     tempButton.innerHTML = fahUnit;
     getWeather();
@@ -52,17 +52,16 @@ tempButton.addEventListener("click", function () {
 
 // Setup the weather icon function
 function weatherIcon(weatherCondition) {
-
   if (weatherCondition >= 200 && weatherCondition <= 232) {
-    icon_src = "./Icons/animated/thunder.svg"
+    icon_src = "./Icons/animated/thunder.svg";
   } else if (weatherCondition >= 300 && weatherCondition <= 531) {
-    icon_src = "./Icons/animated/rainy-1.svg"
+    icon_src = "./Icons/animated/rainy-1.svg";
   } else if (weatherCondition >= 600 && weatherCondition <= 622) {
-    icon_src = "./Icons/animated/snowy-1.svg"
+    icon_src = "./Icons/animated/snowy-1.svg";
   } else if (weatherCondition === 800) {
-    icon_src = "./Icons/animated/day.svg"
+    icon_src = "./Icons/animated/day.svg";
   } else {
-    icon_src = "./Icons/animated/cloudy-day-1.svg"
+    icon_src = "./Icons/animated/cloudy-day-1.svg";
   }
 
   let icon_element = document.getElementById("icon");
