@@ -5,16 +5,22 @@ let units = "imperial";
 let searchButton = document.getElementById("search-btn");
 let tempButton = document.getElementById("tempunitbtn");
 let searchText = document.getElementById("search-txt");
+
+// Chrome requires HTTPS connections but openweather api, the free version, comes through as HTTP
+// added 'https://cors-anywhere.herokuapp.com/' to the api call to fix.
+let weatherApiZip = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?zip=${
+  searchText.value
+}&units=${units}&appid=3c9639b2d937cc613e77cf142beccbe4`;
+let weatherApiCity = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${
+  searchText.value
+}&units=${units}&appid=3c9639b2d937cc613e77cf142beccbe4`;
+let weatherApiCall = '';
 let icon_src = "";
 
 function getWeather() {
-  return fetch(
-    // Chrome requires HTTPS connections but openweather api, the free version, comes through as HTTP
-    // added 'https://cors-anywhere.herokuapp.com/' to the api call to fix.
-    `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?zip=${
-      searchText.value
-    }&units=${units}&appid=3c9639b2d937cc613e77cf142beccbe4`
-  )
+  // weatherApiCall =
+  //   (parseInt(searchText.value) === NaN) ? weatherApiCity : weatherApiZip;
+  return fetch(weatherApiCity)
     .then(response => response.json())
     .then(data => {
       // Begin accessing JSON data here
