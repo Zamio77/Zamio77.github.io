@@ -52,40 +52,40 @@ tempButton.addEventListener("click", function() {
 
 // Setup the weather icon function
 
-// function weatherIcon(weatherCondition) {
-//   switch (weatherCondition) {
-//     case weatherCondition >= 200 && weatherCondition <= 232:
-//       icon_src = "./Icons/animated/thunder.svg";
-//       break;
-//     case weatherCondition >= 300 && weatherCondition <= 531:
-//       icon_src = "./Icons/animated/rainy-1.svg";
-//       break;
-//     case weatherCondition >= 600 && weatherCondition <= 622:
-//       icon_src = "./Icons/animated/snowy-1.svg";
-//       break;
-//     case weatherCondition === 800:
-//       icon_src = "./Icons/animated/day.svg";
-//       break;
-//     default:
-//       icon_src = "./Icons/animated/cloudy-day-1.svg";
-//   }
-
-//   let icon_element = document.getElementById("icon");
-//   icon_element.src = icon_src;
-// }
 function weatherIcon(weatherCondition) {
-  if (weatherCondition >= 200 && weatherCondition <= 232) {
-    icon_src = "./Icons/animated/thunder.svg";
-  } else if (weatherCondition >= 300 && weatherCondition <= 531) {
-    icon_src = "./Icons/animated/rainy-1.svg";
-  } else if (weatherCondition >= 600 && weatherCondition <= 622) {
-    icon_src = "./Icons/animated/snowy-1.svg";
-  } else if (weatherCondition === 800) {
-    icon_src = "./Icons/animated/day.svg";
-  } else {
-    icon_src = "./Icons/animated/cloudy-day-1.svg";
+  switch (true) {
+    case weatherCondition >= 200 && weatherCondition <= 232:
+      icon_src = "./Icons/animated/thunder.svg";
+      break;
+    case weatherCondition >= 300 && weatherCondition <= 531:
+      icon_src = "./Icons/animated/rainy-1.svg";
+      break;
+    case weatherCondition >= 600 && weatherCondition <= 622:
+      icon_src = "./Icons/animated/snowy-1.svg";
+      break;
+    case weatherCondition === 800:
+      icon_src = "./Icons/animated/day.svg";
+      break;
+    default:
+      icon_src = "./Icons/animated/cloudy-day-1.svg";
   }
 
   let icon_element = document.getElementById("icon");
   icon_element.src = icon_src;
 }
+// function weatherIcon(weatherCondition) {
+//   if (weatherCondition >= 200 && weatherCondition <= 232) {
+//     icon_src = "./Icons/animated/thunder.svg";
+//   } else if (weatherCondition >= 300 && weatherCondition <= 531) {
+//     icon_src = "./Icons/animated/rainy-1.svg";
+//   } else if (weatherCondition >= 600 && weatherCondition <= 622) {
+//     icon_src = "./Icons/animated/snowy-1.svg";
+//   } else if (weatherCondition === 800) {
+//     icon_src = "./Icons/animated/day.svg";
+//   } else {
+//     icon_src = "./Icons/animated/cloudy-day-1.svg";
+//   }
+
+//   let icon_element = document.getElementById("icon");
+//   icon_element.src = icon_src;
+// }
