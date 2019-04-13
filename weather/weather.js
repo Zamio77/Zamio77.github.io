@@ -14,11 +14,6 @@ function getWeather() {
   const weatherApiCity = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${searchText.value}&units=${units}&appid=3c9639b2d937cc613e77cf142beccbe4`;
   const weatherApiCall = isNaN(parseInt(searchText.value)) ? weatherApiCity : weatherApiZip;
 
-
-
-  console.log(weatherApiCity);
-  console.log(weatherApiZip);
-  console.log(weatherApiCall);
   fetch(weatherApiCall)
     .then(response => response.json())
     .then(data => {
