@@ -5,7 +5,9 @@ body {
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right top, blue, pink, purple);
   background: linear-gradient(to right top, blue, pink, purple);
+  height: 100%;
   color: white;
+  background-repeat: no-repeat;
 }
 
 .text {
@@ -20,6 +22,10 @@ body {
 #tempunit {
   cursor: pointer;
   color: #006dcc;
+}
+
+#tempunit:hover {
+  color: #005096;
 }
 
 #search-txt {
