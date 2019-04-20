@@ -3,7 +3,8 @@ let fahUnit = "F";
 let celUnit = "C";
 let units = "imperial";
 let searchButton = document.getElementById("search-btn");
-let tempButton = document.getElementById("tempunitbtn");
+// let tempButton = document.getElementById("tempunitbtn");
+let tempUnitBtn = document.getElementById('tempunit');
 let searchText = document.getElementById("search-txt");
 let icon_src = "";
 
@@ -37,21 +38,34 @@ function getWeather() {
 searchButton.addEventListener("click", getWeather);
 
 // Setup the TempButton
-tempButton.addEventListener("click", () => {
-  if (tempButton.innerHTML === "F") {
+// tempButton.addEventListener("click", () => {
+//   if (tempButton.innerHTML === "F") {
+//     units = "metric";
+//     tempButton.innerHTML = celUnit;
+//     getWeather();
+//   } // (tempButton.innerHTML === "C")
+//   else {
+//     units = "imperial";
+//     tempButton.innerHTML = fahUnit;
+//     getWeather();
+//   }
+// });
+
+// Setup the TempUnit Button
+tempUnitBtn.addEventListener("click", () => {
+  if (tempUnitBtn.innerHTML === "F") {
     units = "metric";
-    tempButton.innerHTML = celUnit;
+    tempUnitBtn.innerHTML = celUnit;
     getWeather();
   } // (tempButton.innerHTML === "C")
   else {
     units = "imperial";
-    tempButton.innerHTML = fahUnit;
+    tempUnitBtn.innerHTML = fahUnit;
     getWeather();
   }
 });
 
-// Setup the weather icon function
-
+//Setup the weather icon function
 function weatherIcon(weatherCondition) {
   switch (true) {
     case weatherCondition >= 200 && weatherCondition <= 232:

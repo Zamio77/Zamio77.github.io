@@ -1,9 +1,32 @@
 body {
   text-align: center;
   font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right top, blue, pink, purple);
+  background: linear-gradient(to right top, blue, pink, purple);
+  color: white;
+}
+
+.text {
+  font-size: 20px;
 }
 
 #location {
   font-weight: bold;
   font-size: 24px;
+}
+
+#tempunit {
+  cursor: pointer;
+  color: #006dcc;
+}
+
+#search-txt {
+  color: black;
+}
+
+.icon {
+  width: 12rem;
+  height: 10rem;
 }
