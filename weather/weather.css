@@ -1,7 +1,7 @@
 body {
   text-align: center;
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right top, #1a2a6c, #b21f1f, #fdbb2d);
   background: linear-gradient(to right top, #1a2a6c, #b21f1f, #fdbb2d);
@@ -11,7 +11,7 @@ body {
 }
 
 .text {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 #location {
@@ -33,6 +33,11 @@ body {
 }
 
 .icon {
-  width: 12rem;
-  height: 10rem;
+  width: 17rem;
+  height: 15rem;
+  margin: 15px;
+}
+
+#icon-attribution {
+  padding: 20px;
 }
