@@ -19,9 +19,10 @@ function getWeather() {
     .then(response => response.json())
     .then(data => {
       // Begin accessing JSON data here
+      console.log(data);
       let location = `${data.name}, ${data.sys.country}`;
       document.getElementById("location").innerHTML = location;
-      let temp = data.main.temp + degree;
+      let temp = Math.floor(data.main.temp) + degree;
       document.getElementById("temp").innerHTML = temp;
       let main = data.weather[0].main;
       document.getElementById("main").innerHTML = main;
