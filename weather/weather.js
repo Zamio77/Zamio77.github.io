@@ -38,20 +38,6 @@ function getWeather() {
 // Set the actionlistener for the searchButton
 searchButton.addEventListener("click", getWeather);
 
-// Setup the TempButton
-// tempButton.addEventListener("click", () => {
-//   if (tempButton.innerHTML === "F") {
-//     units = "metric";
-//     tempButton.innerHTML = celUnit;
-//     getWeather();
-//   } // (tempButton.innerHTML === "C")
-//   else {
-//     units = "imperial";
-//     tempButton.innerHTML = fahUnit;
-//     getWeather();
-//   }
-// });
-
 // Setup the TempUnit Button
 tempUnitBtn.addEventListener("click", () => {
   if (tempUnitBtn.innerHTML === "F") {
