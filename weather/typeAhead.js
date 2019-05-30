@@ -1,4 +1,4 @@
-export default class TypeAhead {
+class TypeAhead {
 
     voice() {
         console.log("Hello World!");
