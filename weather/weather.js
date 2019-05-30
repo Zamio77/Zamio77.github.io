@@ -38,6 +38,13 @@ function getWeather() {
 // Set the actionlistener for the searchButton
 searchButton.addEventListener("click", getWeather);
 
+// Set event listener for the Enter key
+window.addEventListener('keypress', (e) => {
+  if (e.keyCode === 13) {
+    getWeather();
+  }
+})
+
 // Setup the TempUnit Button
 tempUnitBtn.addEventListener("click", () => {
   if (tempUnitBtn.innerHTML === "F") {

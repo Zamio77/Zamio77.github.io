@@ -4,10 +4,14 @@ body {
   font-size: 30px;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right top, #1a2a6c, #b21f1f, #fdbb2d);
-  background: linear-gradient(to right top, #1a2a6c, #b21f1f, #fdbb2d);
+  background: #001f3f;
   height: 100%;
   color: white;
   background-repeat: no-repeat;
+}
+
+.button {
+  background-color: orange;
 }
 
 .text {
