@@ -1,9 +1,8 @@
 class TypeAhead {
 
-    voice() {
-        console.log("Hello World!");
+    voice(e) {
+        console.log(e.target.value);
     }
     
 }
 
-export default TypeAhead;
