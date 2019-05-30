@@ -1,3 +1,5 @@
+// import TypeAhead from "./typeAhead"
+
 let degree = "&deg;";
 let fahUnit = "F";
 let celUnit = "C";
@@ -7,10 +9,12 @@ let searchButton = document.getElementById("search-btn");
 let tempUnitBtn = document.getElementById('tempunit');
 let searchText = document.getElementById("search-txt");
 let icon_src = "";
+// let typeAhead = new TypeAhead();
 
 function getWeather() {
   // Github.io requires HTTPS connections but openweather api, the free version, comes through as HTTP thus Github.io blocks it stopping the app
   // added 'https://cors-anywhere.herokuapp.com/' to the api call to fix.
+  // console.log(typeAhead.voice());
   const weatherApiZip = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?zip=${searchText.value}&units=${units}&appid=3c9639b2d937cc613e77cf142beccbe4`;
   const weatherApiCity = `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${searchText.value}&units=${units}&appid=3c9639b2d937cc613e77cf142beccbe4`;
   const weatherApiCall = isNaN(parseInt(searchText.value)) ? weatherApiCity : weatherApiZip;
@@ -43,6 +47,11 @@ window.addEventListener('keypress', (e) => {
   if (e.keyCode === 13) {
     getWeather();
   }
+})
+
+// Set event listenter for the typeAhead feature
+searchText.addEventListener('input', (e) => {
+  console.log(e.target.value);
 })
 
 // Setup the TempUnit Button
