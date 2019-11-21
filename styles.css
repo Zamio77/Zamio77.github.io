@@ -22,12 +22,20 @@ li {
 }
 
 .container {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   margin-top: 25px;
-  text-align: center;
+  border-bottom: 50px;
+  text-align: left;
   color: white;
   border-radius: 9px;
   background: url("graniteBackground.jpg") repeat-x;
   box-shadow: 2px 2px 12px hsla(105, 41%, 32%, 0.72);
   padding-top: 39px;
+}
+
+#clock {
+  font-family: 'Share Tech Mono', monospace;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: right;
 }
