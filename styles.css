@@ -8,10 +8,26 @@ body {
   margin: 0px;
 }
 
+.wrapper {
+  margin-bottom: 50px;
+  margin-top: 25px;
+  border-bottom: 100px;
+  padding-right: 0;
+  float: left;
+  width: 20%;
+  height: 500px;
+  padding-bottom: 50px;
+  text-align: left;
+  color: white;
+  border-radius: 9px;
+  background: url("graniteBackground.jpg") no-repeat;
+  box-shadow: 2px 2px 12px hsla(5, 72%, 48%, 0.72);
+  padding-top: 39px;
+}
+
 h1 {
   font-weight: bold;
-  font-size: 50px;
-}
+  }
 
 ul {
   list-style-type: none;
@@ -19,19 +35,10 @@ ul {
 
 li {
   margin: 0 0 10px 0;
+  font-size: 20px;
 }
 
-.container {
-  margin-bottom: 50px;
-  margin-top: 25px;
-  border-bottom: 50px;
-  text-align: left;
-  color: white;
-  border-radius: 9px;
-  background: url("graniteBackground.jpg") repeat-x;
-  box-shadow: 2px 2px 12px hsla(105, 41%, 32%, 0.72);
-  padding-top: 39px;
-}
+
 
 #clock {
   font-family: 'Share Tech Mono', monospace;
