@@ -10,11 +10,23 @@ const Card = props => {
         <div className='card-body text-dark card-header'>
             <h4 className='card-title'>{props.title}</h4>
             <p className='card-text text-secondary'>{props.txt}</p>
-            <h6 className='card-subtitle mb-2 text-muted'>If you want to get better at something, choose small projects</h6>
-            <button type='button' class='btn btn-outline-dark'>{props.chat}</button>
+            <h6 className='card-subtitle mb-2 text-muted'>
+            If you want to get better at something, choose small projects
+            </h6>
+        <div class='row'>
+            <div class='col-sm'>
+            <button type='button' class='btn btn-outline-dark fas fa-comment'></button>
+            </div>
+            <div class='col-sm'>
             <button type='button' class='btn btn-outline-dark'>Like</button>
+            </div>
+            <div class='col-sm'>
             <button type='button' class='btn btn-outline-dark'>Like</button>
+            </div>
+            <div class="col-sm">
             <button type='button' class='btn btn-outline-dark'>Like</button>
+            </div>
+        </div>
         </div>
     </div>
     )

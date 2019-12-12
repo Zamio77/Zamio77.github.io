@@ -12,7 +12,6 @@ class Cards extends Component {
                     imgsrc={img1} 
                     title='Chrono Trigger' 
                     txt={chrono.chronTrigger}
-                    chat={chatImg}
                 />
             </div>
         )
