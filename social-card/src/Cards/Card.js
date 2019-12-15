@@ -15,16 +15,16 @@ const Card = props => {
             </h6>
         <div class='row'>
             <div class='col-sm'>
-            <button type='button' class='btn btn-outline-dark fas fa-comment'></button>
+            <button type='button' class='btn btn-outline-dark'><i class="fas fa-comment"></i></button>
             </div>
             <div class='col-sm'>
-            <button type='button' class='btn btn-outline-dark'>Like</button>
+            <button type='button' class='btn btn-outline-dark'><i class="fas fa-share"></i></button>
             </div>
             <div class='col-sm'>
-            <button type='button' class='btn btn-outline-dark'>Like</button>
+            <button type='button' class='btn btn-outline-dark'><i class="fas fa-heart red"></i></button>
             </div>
             <div class="col-sm">
-            <button type='button' class='btn btn-outline-dark'>Like</button>
+            <button type='button' class='btn btn-outline-dark'><i class="fas fa-envelope"></i></button>
             </div>
         </div>
         </div>
