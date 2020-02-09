@@ -1,8 +1,37 @@
-.home-page {
+.container {
     display: grid;
     grid-gap: 15px;
+    grid-template-columns: minmax(200px, 5);
+    grid-template-rows: minmax(200px, 5);
 }
 
+.blogPost {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: minmax(200px, 5);
+    grid-template-rows: minmax(200px, 5);
+    margin-top: 100px;
+}
+
+
+.heading {
+    display: flex;
+    grid-area: 1/1/1/3;
+}
+.postOne {
+    display: flex;
+    grid-area: 2/2/2/3;
+}
+
+.postTwo {
+    display: flex;
+    grid-area: 3/2/3/3;
+}
+
+.postThree {
+    display: flex;
+    grid-area: 4/2/4/3;
+}
 
 header {
     position: fixed;
@@ -11,6 +40,7 @@ header {
     background: #fafafa;
     font-size: 24px;
     width: 100%;
+    grid-area: auto;
 }
 
 nav {
