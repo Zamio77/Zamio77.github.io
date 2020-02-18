@@ -1,52 +1,74 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Doug's Blog website</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-        <link href="header.css" rel="stylesheet" />
 
-    </head>
-    <body>
-        <div class="container">
-        <header>
-           <nav class="menu">
-               <ul>
-                   <li>
-                       <a href="index.html">Blog</a>
-                   </li>
-                   <li>
-                       <a href="#">About Me</a>
-                   </li>
-                   <li class="socials">
-                       <ul>
-                           <li>Facebook</li>
-                           <li>Linkedin</li>
-                           <li>Twitter</li>
-                       </ul>
-                   </li>
-                </ul>
-           </nav>
-            
-        </header>
-        <section class="blogPost">
-        <h1 class="box heading">This is Doug's Blog Post!!! And the Header!!!</h1>
-        <div class="box postOne">
-            <h1>Post 1</h1>
-        </div>
-        <div class="box postTwo">
-            <h1>Post 2</h1>
-        </div>
-        <div class="box postThree">
-            <h1>Post 3</h1>
-        </div>
-        
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doug's Blog website</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="./Styles/header.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="index.html">Blog</a>
+                </li>
+                <li>
+                    <a href="#">About Me</a>
+                </li>
+                <li class="socials">
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Linkedin</li>
+                        <li>Twitter</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section class="container">
+        <section class="blogpost">
+            <h1 class="About">Recent Posts</h1>
+            <article class="card">
+                <figure>
+                    <img class="card-img" src="./Imgs/FinalFantasy.jpeg" alt="Final Fantasy">
+                    <figcaption>Final Fantasy VII</figcaption>
+                </figure>
+                <section class="card-content">
+                    <h2 class="title">Final Fantasy VII the first blog post</h2>
+                    <h3 class="sub-title">Release September 7, 1997</h3>
+                    <p class="summary">A classic game for playstaion, Final Fantasy VII remains fantastic
+                        and is consistently rated one of the greatest games
+                        of all time! Aperiam architecto quidem magni labore libero fugiat,
+                        repellat magnam laudantium amet alias commodi, aspernatur, totam maiores?
+                        Doloremque, obcaecati.</p>
+                    <a href="#" class="btn">Read More</a>
+                </section>
+            </article>
+            <article class="card">
+                <div>
+                    <h1>Post 2</h1>
+                </div>
+            </article>
+            <article class="card">
+                <div>
+                    <h1>Post 3</h1>
+                </div>
+            </article>
+        </section>
     </section>
-    <footer class="box">
+    <footer>
         <h1>This is the footer</h1>
-    </footer> 
-    </div>
-    </body>
+    </footer>
+
+</body>
+
 </html>

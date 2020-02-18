@@ -1,0 +1,141 @@
+/* The main styling for the page */
+body {
+    display: block;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-rows: repeat(1, 1fr);
+    grid-auto-rows: auto;
+    align-items: flex-start;
+}
+
+/* The posts */
+.blogpost {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 25px 30px;
+    justify-content: space-around;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+.blogpost h1 {
+    margin: 15px 0 10px 10px;
+}
+
+.card {
+    display: flex;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.24);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 30px 10px;
+    transition: all 0.3s ease-out;
+}
+
+.card-img {
+    Height: 350px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.card figure {
+    margin: 0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+article .title {
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+article .sub-title {
+    margin-top: 15px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+article .summary {
+    margin-top: 15px;
+    text-align: center;
+}
+
+p {
+    font-size: 14px;
+}
+
+article .btn {
+    margin-top: 25px;
+}
+
+.btn {
+    display: flex;
+    position: relative;
+    padding: 12px 0;
+    border: 2px solid black;
+    background: black;
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+a {
+    font-size: 16px;
+}
+
+/* The header */
+
+header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+    background: #fafafa;
+    font-size: 24px;
+    width: 100%;
+    grid-area: auto;
+    grid-column: 1/4;
+}
+
+nav {
+    position: relative;
+    overflow: hidden;
+}
+
+.menu {
+    flex-direction: row;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+
+}
+
+li {
+    margin: 0 15px;
+
+}
+
+li:nth-child(3) {
+    margin-left: auto;
+}
