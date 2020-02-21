@@ -1,0 +1,98 @@
+/* The posts */
+
+.blogpost {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    justify-content: space-around;
+}
+
+.container {
+    grid-area: main;
+    max-width: 100%;
+    padding: 25px 15px 0 15px;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+.blogpost h1 {
+    margin: 30px 0 15px 0;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 30px 10px;
+    transition: all 0.3s ease-out;
+}
+
+.card-img {
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card figure {
+    margin: 0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+article .title {
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+article .sub-title {
+    margin-top: 15px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+article .summary {
+    margin-top: 15px;
+    text-align: center;
+}
+
+p {
+    font-size: 14px;
+}
+
+article .btn {
+    margin-top: 25px;
+}
+
+.btn {
+    display: flex;
+    position: relative;
+    padding: 12px 0;
+    border: 2px solid black;
+    background: black;
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+a {
+    font-size: 16px;
+}

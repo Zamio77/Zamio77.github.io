@@ -1,0 +1,23 @@
+@import "./header.css";
+@import "./container.css";
+@import "./footer.css";
+
+
+/* The main styling for the page */
+body {
+    display: block;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+.home-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
