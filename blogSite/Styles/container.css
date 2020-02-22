@@ -45,6 +45,7 @@ h1 {
     display: flex;
     flex-direction: column;
     margin-left: 10px;
+    align-items: center;
 }
 
 article .title {
@@ -93,6 +94,46 @@ article .btn {
     cursor: pointer;
 }
 
+.btn:hover {
+    color: black;
+    background: white;
+    transition: all 0.3s ease-in;
+}
+
 a {
+    font-size: 16px;
+}
+
+/* The subscribe section */
+
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.subscribe p h1 {
+    text-align: center;
+}
+
+.subscribe p {
+    font-size: 25px;
+}
+
+.subscribe input[type="text"],
+[type="email"] {
+    margin-top: 25px;
+}
+
+input[type="text"],
+[type="email"] {
+    padding: 12px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+}
+
+button {
     font-size: 16px;
 }
