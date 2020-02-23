@@ -9,6 +9,7 @@ header {
     position: fixed;
     grid-area: header;
     grid-column: 1/4;
+    margin-top: 0;
 }
 
 nav {
@@ -37,7 +38,7 @@ li {
     cursor: pointer;
 }
 
-li:nth-child(3) {
+header li:nth-child(3) {
     margin-left: auto;
 }
 
