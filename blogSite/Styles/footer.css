@@ -4,6 +4,7 @@ footer {
     grid-area: footer;
     margin-top: 70px;
     background: black;
+    font-size: 20px;
 }
 
 footer ul {
@@ -23,4 +24,17 @@ footer ul li {
 
 footer ul li i {
     margin-right: 15px;
+}
+
+@media screen and (min-width: 600px) {
+    footer ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer ul li {
+        cursor: pointer;
+        margin-bottom: 0;
+    }
+
 }

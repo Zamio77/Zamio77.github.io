@@ -42,6 +42,10 @@ header li:nth-child(3) {
     margin-left: auto;
 }
 
+header .socials li:nth-child(2) {
+    margin-left: auto;
+}
+
 nav .socials i {
     color: #0e0101;
     font-size: 25px !important;
