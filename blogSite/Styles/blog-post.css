@@ -1,0 +1,10 @@
+@import "./blogpost.css";
+@import "./container.css";
+@import "./header.css";
+@import "./footer.css";
+
+body {
+    display: block;
+    font-size: 12px;
+    font-family: sans-serif;
+}
