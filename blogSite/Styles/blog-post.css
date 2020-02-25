@@ -1,7 +1,8 @@
-@import "./blogpost.css";
+@import "./home-page.css";
 @import "./container.css";
 @import "./header.css";
 @import "./footer.css";
+@import "./main.css";
 
 body {
     display: block;
@@ -19,4 +20,35 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
+}
+
+header {
+    grid-area: header;
+}
+
+.container {
+    grid-area: main;
+    margin: 70px auto;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.blog-header {
+    display: flex;
+    padding: 10px 10px 10px 0;
+    align-items: center;
+}
+
+.blog-author-pic {
+    display: block;
+    margin: auto;
+    position: relative;
+    border-radius: 100%;
+    width: 210px;
+}
+
+.blog-author {
+    padding-left: 10px;
 }

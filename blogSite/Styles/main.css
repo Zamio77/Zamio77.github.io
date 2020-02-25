@@ -1,24 +1,23 @@
 @import "./header.css";
 @import "./container.css";
 @import "./footer.css";
-@import "./blogpost.css";
+@import "./home-page.css";
 
 
-/* The main styling for the page */
-body {
-    display: block;
-    font-size: 12px;
-    font-family: sans-serif;
+
+
+.blogpost {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    justify-content: space-around;
 }
 
-.home-page {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
-    margin: 0;
-    padding: 0;
-    border: 0;
+h1 {
+    font-size: 45px;
+}
+
+.blogpost h1 {
+    margin: 30px 0 15px 0;
+    text-align: center;
 }
