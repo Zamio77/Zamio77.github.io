@@ -1,0 +1,23 @@
+@import "./header.css";
+@import "./container.css";
+@import "./footer.css";
+@import "./home-page.css";
+
+
+
+
+.blogpost {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    justify-content: space-around;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+.blogpost h1 {
+    margin: 30px 0 15px 0;
+    text-align: center;
+}

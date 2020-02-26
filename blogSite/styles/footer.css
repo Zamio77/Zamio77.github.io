@@ -1,0 +1,40 @@
+/* This is the footer */
+
+footer {
+    grid-area: footer;
+    margin-top: 70px;
+    background: black;
+    font-size: 20px;
+}
+
+footer ul {
+    display: block;
+    padding: 45px 20px;
+    color: white;
+}
+
+footer ul li {
+    margin-bottom: 15px;
+}
+
+.far {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+}
+
+footer ul li i {
+    margin-right: 15px;
+}
+
+@media screen and (min-width: 600px) {
+    footer ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer ul li {
+        cursor: pointer;
+        margin-bottom: 0;
+    }
+
+}
