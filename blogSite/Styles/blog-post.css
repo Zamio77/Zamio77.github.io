@@ -52,3 +52,65 @@ footer {
 .blog-author {
     padding-left: 10px;
 }
+
+.blog-post {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 30px 30px 20px 30px;
+}
+
+.blog-description {
+    display: block;
+    margin-bottom: 65px;
+}
+
+/* The subscribe section */
+.subscribe {
+    margin-top: 20px;
+    padding: 30px 30px 20px 30px;
+}
+
+.btn {
+    margin-top: 25px;
+}
+
+/* The author section */
+.author {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 30px 30px 20px 30px;
+    text-align: center;
+}
+
+.author figure img {
+    width: 225px;
+    margin: auto;
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 50%;
+    line-height: 0;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 2px;
+}
+
+.author h3 {
+    font-size: 14px;
+    margin: 2px;
+}
+
+.author p {
+    margin: 18px 0;
+}
+
+.author blockquote {
+    padding: 15px;
+    background: #eee;
+}
+
+.author footer {
+    background: #eee;
+    margin: 0;
+}
