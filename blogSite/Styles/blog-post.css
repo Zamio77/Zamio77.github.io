@@ -114,3 +114,48 @@ h2 {
     background: #eee;
     margin: 0;
 }
+
+@media screen and (min-width: 600px) {
+    .blog-post-page {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "blog author"
+            "blog subscribe";
+        grid-gap: 20px;
+    }
+
+    .container {
+        grid-area: main;
+        margin-top: 145px;
+    }
+
+    .blog-post {
+        grid-area: blog;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .author {
+        grid-area: author;
+        margin-top: 0;
+    }
+
+    .subscribe {
+        grid-area: subscribe;
+        margin-top: 0;
+    }
+
+    .blog-post .blog-description {
+        margin-top: 25px;
+    }
+}
