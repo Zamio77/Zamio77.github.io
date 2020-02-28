@@ -3,14 +3,13 @@
 footer {
     grid-area: footer;
     margin-top: 70px;
-    background: black;
+    background: #fafafa;
     font-size: 20px;
 }
 
 footer ul {
     display: block;
     padding: 45px 20px;
-    color: white;
 }
 
 footer ul li {
@@ -24,6 +23,11 @@ footer ul li {
 
 footer ul li i {
     margin-right: 15px;
+}
+
+.far {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
 }
 
 @media screen and (min-width: 600px) {
