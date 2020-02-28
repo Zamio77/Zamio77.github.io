@@ -133,6 +133,8 @@ button {
     }
 }
 
+/* This is added to keep the Card items from being stretch out over the screen */
+
 @media (min-width: 768px) {
     .container {
         max-width: 750px;
