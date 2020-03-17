@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
+- [Instructions](#instructions)
 
 ## Instructions
 
@@ -11,3 +11,7 @@ The starter project has some HTML and CSS styling to display a static version of
 To get started, open `js/app.js` and start building out the app's functionality
 
 For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+
+## Addendum
+
+This was a Udacity project to create a dynamic landing page where the navigation bar updates based on what sections are added to the page. The naviagation page will scroll to the section based on which one is clicked. You can see the completed project [here](https://zamio77.github.io/MarketLangingPage/landing-page/index.html)
