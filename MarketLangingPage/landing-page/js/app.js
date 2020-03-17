@@ -56,9 +56,6 @@ function buildNav(sections) {
 }
 
 
-// Add class 'active' to section when near top of viewport
-
-
 // Scroll to anchor ID using scrollTO event
 function scrollToElement(elem) {
     const rect = elem.getBoundingClientRect();
@@ -85,7 +82,7 @@ function scrollToSection(e) {
     scrollToElement(currentEle);
 }
 
-// Set sections as active
+
 
 function setSections() {
     sections.forEach(section => {
