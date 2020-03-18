@@ -30,8 +30,7 @@ const sections = document.querySelectorAll('section');
 function isInViewport(elem) {
     const el = elem.getBoundingClientRect();
     return (
-        el.top >= 0 &&
-        // el.top <= 10 &&
+        el.top >= -1 &&
         el.bottom <= (window.innerHeight || document.documentElement.clientHeight)
     );
 }
