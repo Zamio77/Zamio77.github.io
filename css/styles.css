@@ -1,0 +1,61 @@
+body {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  background: #F0FFFF;
+  font-size: 30px;
+  /* Chrome 10-25, Safari 5.1-6 */
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 0px;
+}
+
+.wrapper {
+  margin-bottom: 50px;
+  margin-top: 25px;
+  margin-left: 50px;
+  border-bottom: 100px;
+  padding-right: 0;
+  width: 50%;
+  height: 60%;
+  padding-bottom: 50px;
+  color: white;
+  border-radius: 9px;
+  background: url("./assets/graniteBackground.jpg") repeat;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  padding-top: 39px;
+  align-items: center;
+}
+
+.wrapper2 {
+  padding: 10px;
+}
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  font-weight: bold;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+}
+
+
+
+#clock {
+  font-family: 'Share Tech Mono', monospace;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: right;
+}
