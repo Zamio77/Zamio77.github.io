@@ -31,9 +31,8 @@ function isInViewport(elem) {
     const el = elem.getBoundingClientRect();
     return (
         el.top >= 0 &&
-        el.top <= 0 &&
-        el.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        el.right <= (window.innerWidth || document.documentElement.clientWidth)
+        el.top <= 10 &&
+        el.bottom <= (window.innerHeight || document.documentElement.clientHeight)
     );
 }
 
