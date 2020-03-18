@@ -2,9 +2,9 @@ body {
   font-family: "Roboto", sans-serif;
   text-align: center;
   background: #F0FFFF;
-  
+
   /* Chrome 10-25, Safari 5.1-6 */
-  
+
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   margin: 0px;
 }
@@ -20,10 +20,10 @@ body {
   padding-bottom: 50px;
   color: white;
   border-radius: 9px;
-  background: url("graniteBackground.jpg") repeat;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  background: url("/assets/graniteBackground.jpg") repeat;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   padding-top: 39px;
   align-items: center;
 }
@@ -35,7 +35,7 @@ body {
 h1 {
   font-weight: bold;
   text-align: center;
-  }
+}
 
 h2 {
   font-weight: bold;
