@@ -8,41 +8,55 @@
   <title>Doug's portfolio website</title>
 
   <link href="./css/styles.css" rel="stylesheet" />
+  <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="wrapper">
-    <div class="wrapper2">
-      <h1>Doug Lamar</h1>
-      <h2>Projects</h2>
-    </div>
-    <ul>
-      <li>
-        <a href="./tipCalculator/index.html">The tipCalculator</a>
-        <strong>: HTML, CSS, Javascript (ES6+), and VUE.js</strong>
-      </li>
-      <li>
+  <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header">
+    <nav class="navbar__menu">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list"></ul>
+    </nav>
+  </header>
+  <main>
+    <div class="home__page">
+      <header class="main__hero">
+        <h1>Doug Lamar</h1>
+        <h2>Portfolio Website</h2>
+      </header>
+      <section id="section1" data-nav="Landing Page" class="your-active-class">
+        <div class="landing__container">
+          <h1>Dynamic Landing Page</h1>
+          <p>
+            <a href="./MarketLangingPage/landing-page/index.html">Dynamic Landing Page</a>
+            <strong>: html, css, Javascript</strong>
+          </p>
+        </div>
+      </section>
+      <p>
         <a href="./weather/weather.html">The Weather app</a>
         <strong>: HTML, CSS, Javascript (ES6+)</strong>
-      </li>
+      </p>
       <h2>Udacity Projects</h2>
-      <li>
+      <p>
         <a href="./blogSite/index.html">Blog Website</a>
         <strong>: html, css, Flexbox, Grid</strong>
-      </li>
-      <li>
-        <a href="./MarketLangingPage/landing-page/index.html">Dynamic Landing Page</a>
-        <strong>: html, css, Javascript</strong>
-      </li>
-    </ul>
-  </div>
-  <div id='clock'>
-    <p class="date">{{ date }}</p>
-    <p class="time">{{ time }}</p>
-  </div>
+      </p>
+      <p>
+        <a href="./tipCalculator/index.html">The tipCalculator</a>
+        <strong>: HTML, CSS, Javascript (ES6+), and VUE.js</strong>
+      </p>
+
+
+      <div id='clock'>
+        <p class="date">{{ date }}</p>
+        <p class="time">{{ time }}</p>
+      </div>
+  </main>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="./JS/scripts.js"></script>
 </body>
