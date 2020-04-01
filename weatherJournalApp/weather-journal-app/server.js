@@ -45,6 +45,7 @@ const getData = (req, res) => {
     console.log(projectData);
 }
 
+// POST Route
 app.post('/add', info);
 
 const info = (req, res) => {
