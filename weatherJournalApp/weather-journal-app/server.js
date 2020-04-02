@@ -49,7 +49,7 @@ const getData = (req, res) => {
 app.post('/add', info);
 
 const info = (req, res) => {
-
+    console.log(req.body);
     projectData.temp = req.body.temp;
     projectData.date = req.body.date;
     projectData.content = req.body.content;
