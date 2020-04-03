@@ -18,12 +18,14 @@ const performAction = (e) => {
     getWeatherData(`${baseURL}${zipcode}${apiKey}`)
         .then(function (data) {
             postData('/add', {
-                temperature: data.main.temp,
+                temp: data.main.temp,
                 date: newDate,
                 content: content
             }).then(updateUI);
         })
 }
+
+
 /* Function to GET Web API Data*/
 const getWeatherData = async (url) => {
     const response = await fetch(url)
@@ -56,3 +58,14 @@ const postData = async (url = '', data = {}) => {
 }
 
 /* Function to GET Project Data */
+const updateUI = async () => {
+    const request = await fetch('/all');
+    try {
+        const allData = await request.json();
+        document.getElementById('date').innerHTML = allData.date;
+        document.getElementById('temp').innerHTML = allData.temp;
+        document.getElementById('content').innerHTML = allData.content;
+    } catch (error) {
+        console.log('error', error);
+    }
+}

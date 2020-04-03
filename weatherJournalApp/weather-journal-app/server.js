@@ -50,10 +50,14 @@ app.post('/add', info);
 
 const info = (req, res) => {
     console.log(req.body);
-    projectData.temp = req.body.temp;
-    projectData.date = req.body.date;
-    projectData.content = req.body.content;
 
+    newEntry = {
+        temperature: req.body.temp,
+        date: req.body.date,
+        content: req.body.content
+    }
+
+    projectData.push(newEntry);
     res.send(projectData);
     console.log(projectData);
 }
