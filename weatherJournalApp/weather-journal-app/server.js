@@ -53,7 +53,6 @@ app.post('/add', (req, res) => {
         content: req.body.content
     }
 
-    projectData.push(newEntry);
     res.send(projectData);
     console.log(projectData);
 });

@@ -25,28 +25,13 @@ let generate = document.getElementById('generate').addEventListener('click', (e)
 
 /* Function to GET Web API Data*/
 const getWeatherData = async (url) => {
-    const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': 'http://localhost:8000/',
-        },
-        credentials: 'same-origin', // include, *same-origin, omit
-    });
-
+    const response = await fetch(url)
     try {
         const data = await response.json();
-        console.log(data);
-
-        console.log(data.main.temp);
-        // data.weather[0].main
-
-        return data; // json response
-        // we can now do smth with returned data here
-
+        console.log(data)
+        return data;
     } catch (error) {
-        console.log("error", error);
-        // appropriately handle the error
+        console.log('error', error);
     }
 };
 
