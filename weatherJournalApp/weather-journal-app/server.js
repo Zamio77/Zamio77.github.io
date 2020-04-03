@@ -29,7 +29,7 @@ app.use(express.static('website'));
 const port = 3000;
 
 // Spin up the server
-const server = app.listen(port, listening);
+const server = app.listen(port, listening());
 
 // Callback to degug
 function listening() {
@@ -38,17 +38,13 @@ function listening() {
 }
 
 // Callback function to complete GET '/all'
-app.get('/all', getData);
-
-const getData = (req, res) => {
+app.get('/all', (req, res) => {
     res.send(projectData);
     console.log(projectData);
-}
+});
 
 // POST Route
-app.post('/add', info);
-
-const info = (req, res) => {
+app.post('/add', (req, res) => {
     console.log(req.body);
 
     newEntry = {
@@ -60,4 +56,4 @@ const info = (req, res) => {
     projectData.push(newEntry);
     res.send(projectData);
     console.log(projectData);
-}
+});
