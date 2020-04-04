@@ -29,6 +29,7 @@ const getWeatherData = async (url) => {
     try {
         const data = await response.json();
         console.log(data)
+        console.log('I am the GET req getting the data')
         return data;
     } catch (error) {
         console.log('error', error);
