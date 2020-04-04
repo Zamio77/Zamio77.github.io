@@ -11,13 +11,13 @@ const baseURL = 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.o
 // Event listener to add function to existing HTML DOM element
 let generate = document.getElementById('generate').addEventListener('click', (e) => {
     const zipcode = document.getElementById('zip').value;
-    const content = document.getElementById('content').value;
+    const feelings = document.getElementById('feelings').value;
     getWeatherData(`${baseURL}${zipcode}${apiKey}`)
         .then(function (data) {
             postData('/add', {
                 temp: data.main.temp,
                 date: newDate,
-                content: content
+                content: feelings
             }).then(updateUI);
         })
 });

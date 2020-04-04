@@ -47,11 +47,15 @@ app.get('/all', (req, res) => {
 app.post('/add', (req, res) => {
     console.log(req.body);
 
-    newEntry = {
+    let newEntry = {
         temperature: req.body.temp,
         date: req.body.date,
         content: req.body.content
     }
+
+    projectData = {
+        ...newEntry
+    } //updating the global variable
 
     res.send(projectData);
     console.log(projectData);
