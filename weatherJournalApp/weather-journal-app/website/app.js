@@ -8,8 +8,9 @@ let newDate = d.getMonth() + '.' + d.getDate() + '.' + d.getFullYear();
 const apiKey = '&appid=3c9639b2d937cc613e77cf142beccbe4'
 const baseURL = 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?units=imperial&zip='
 
-// Event listener to add function to existing HTML DOM element
-let generate = document.getElementById('generate').addEventListener('click', (e) => {
+
+// Function called by event listener     
+const performAction = (e) => {
     const zipcode = document.getElementById('zip').value;
     const feelings = document.getElementById('feelings').value;
     getWeatherData(`${baseURL}${zipcode}${apiKey}`)
@@ -20,7 +21,13 @@ let generate = document.getElementById('generate').addEventListener('click', (e)
                 content: feelings
             }).then(updateUI);
         })
-});
+};
+
+
+// Event listener to add function to existing HTML DOM element
+let generate = document.getElementById('generate').addEventListener('click', performAction);
+
+
 
 
 /* Function to GET Web API Data*/
