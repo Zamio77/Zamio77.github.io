@@ -46,7 +46,6 @@ app.get("/all", (req, res) => {
 
 // POST Route
 app.post("/add", (req, res) => {
-  console.log("I am the POST");
   console.log(req.body);
 
   projectData.temp = req.body.temp;
