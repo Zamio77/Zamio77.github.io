@@ -30,3 +30,14 @@ app.listen(8080, function () {
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
+
+
+// setup for the Api work
+
+// Setup empty JS object to act as endpoint for all routes
+projectData = {};
+
+app.get("/api", (req, res) => {
+    res.send(aylienApi);
+    console.log(aylienApi);
+  });

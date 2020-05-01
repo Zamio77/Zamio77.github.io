@@ -11,6 +11,20 @@ function handleSubmit(event) {
     .then(function(res) {
         document.getElementById('results').innerHTML = res.message
     })
+
+    const getApi = async () => {
+        const request = await fetch("http://localhost:8000/api");
+        try {
+          const allData = await request.json();
+          console.log(allData);
+        } catch (error) {
+          console.log("error", error);
+        }
+      };
+
+    getApi();
 }
+
+
 
 export { handleSubmit }
