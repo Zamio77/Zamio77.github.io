@@ -28,7 +28,7 @@ function handleSubmit(event) {
       };
 
     const getApi = async () => {
-        const request = await fetch("http://localhost:8080/api");
+        const request = await fetch("http://localhost:8000/api");
         try {
           const allData = await request.json();
           console.log(allData);
