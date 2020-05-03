@@ -6,8 +6,8 @@ export function handleSubmit(event) {
     if (validURL(formText)){
       console.log('::: Data posted :::')
       // Check what text was put into the form field
-      console.log("::: Form Submitted :::"
-      ClientRect.postData('/sentiment', {URL: formText}))
+      console.log("::: Form Submitted :::")
+      Client.postData('/sentiment', {text: formText}))
     } else {
         alert("The URL you entered is not valid. Please try again")
     }

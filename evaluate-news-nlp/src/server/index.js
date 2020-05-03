@@ -41,10 +41,10 @@ app.post('/sentiment', sendData);
 
 function sendData (req, res) {
     console.log(req);
-    const url = req.body.url
-    console.log(url);
+    const text = req.body.text
+    console.log(text);
     aylienApi.sentiment({
-        url: url,
+        text: text,
         mode: 'document'
     },
     function(error, response) {
