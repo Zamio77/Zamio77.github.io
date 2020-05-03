@@ -12,7 +12,7 @@ function handleSubmit(event) {
         document.getElementById('results').innerHTML = res.message
     })
 
-    Client.getApi();
+    Client.getApi('/api', {URL: formText});
 }
 
 

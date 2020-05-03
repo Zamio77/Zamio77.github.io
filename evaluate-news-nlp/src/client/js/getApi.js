@@ -1,4 +1,4 @@
-export const getApi = async () => {
+export const getApi = async (url='', data={}) => {
     const request = await fetch("http://localhost:8080/api");
     try {
       const allData = await request.json();
