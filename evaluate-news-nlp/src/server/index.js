@@ -37,7 +37,6 @@ app.get('/test', function (req, res) {
 // Setup empty JS object to act as endpoint for all routes
 projectData = {};
 
-app.get('*', (req, res) => {
-    res.sendFile('dist/index.html')
-    res.sendFile(path.resolve('dist/index.html'))
+app.get('/api', (req, res) => {
+    req.send("I exist!");
 })
