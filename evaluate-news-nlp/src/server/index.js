@@ -31,9 +31,7 @@ app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
 
-app.get('/api', (req, res) => {
-    res.send({ message: 'Hello World' });
-})
+
 
 // setup for the Api work
 
