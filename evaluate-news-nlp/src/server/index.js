@@ -37,19 +37,7 @@ app.get('/test', function (req, res) {
 // Setup empty JS object to act as endpoint for all routes
 projectData = {};
 
-app.post("/api", (req, res) => {
-    console.log(req);
-    const url = req.body.url
-    console.log(url)
-    aylienApi.sentiment({
-        url: url,
-        mode: 'document'
-    },
-    function(error, response) {
-        if (error) {
-            console.log(error)
-        } else{
-            res.send(response)
-        }
-    })
-  });
+app.get('*', (req, res) => {
+    res.sendFile('dist/index.html')
+    res.sendFile(path.resolve('dist/index.html'))
+})
