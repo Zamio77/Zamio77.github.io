@@ -37,6 +37,22 @@ app.get('/test', function (req, res) {
 // Setup empty JS object to act as endpoint for all routes
 projectData = {};
 
-app.get('/api', (req, res) => {
-    req.send("I exist!");
-})
+app.post('/sentiment', sendData);
+
+function sendData (req, res) {
+    console.log(req);
+    const url = req.body.url
+    console.log(url);
+    aylienApi.sentiment({
+        url: url,
+        mode: 'document'
+    },
+    function(error, response) {
+        if (error) {
+            console.log(error)
+        } else {
+            res.send(response)
+        }
+    }
+    )
+}
