@@ -31,6 +31,9 @@ app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
 
+app.get('/api', (req, res) => {
+    res.send({ message: 'Hello World' });
+})
 
 // setup for the Api work
 
@@ -56,3 +59,20 @@ function sendData (req, res) {
     }
     )
 }
+
+app.post("/add", (req, res) => {
+    console.log(req.body);
+  
+    projectData.text = req.body.text;
+    projectData.subjectivity = req.body.subjectivity;
+    projectData.polarity = req.body.polarity;
+    projectData.polarity_confidence = (req.body.polarity_confidence*100);
+  
+    res.send(projectData);
+    console.log(projectData);
+  });
+
+  app.get("/all", (req, res) => {
+    res.send(projectData);
+    console.log(projectData);
+  });
