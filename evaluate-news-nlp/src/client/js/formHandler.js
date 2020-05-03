@@ -27,9 +27,24 @@ function handleSubmit(event) {
         }
       };
 
+    const getApi = async () => {
+        const request = await fetch("http://localhost:8080/api");
+        try {
+          const allData = await request.json();
+          console.log(allData);
+        } catch (error) {
+          console.log("error", error);
+        }
+      };
+
     getApi();
 }
 
 
+<<<<<<< HEAD
 >>>>>>> parent of b3b0ca60... Reorganizing the formHandler file
 
+=======
+
+export { handleSubmit }
+>>>>>>> parent of b3b0ca60... Reorganizing the formHandler file
