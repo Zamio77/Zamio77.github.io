@@ -8,4 +8,4 @@ export const getApi = async (url='', data={}) => {
     }
   };
 
-export { handleSubmit }
+export { getApi }
