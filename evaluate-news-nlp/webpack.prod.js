@@ -11,7 +11,8 @@ module.exports = {
     mode: 'production',
     output: {
         libraryTarget: 'var',
-        library: 'Client'
+        library: 'Client',
+        publicPath: "/build/",
     },
     optimization: {
         minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})]
