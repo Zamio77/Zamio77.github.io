@@ -3,7 +3,7 @@ export function handleSubmit(event) {
 
     // check what text was put into the form field
     let formText = document.getElementById('name').value
-  
+    if (validURL(formText)){
       console.log('::: Data posted :::')
       // Check what text was put into the form field
       console.log("::: Form Submitted :::")
@@ -15,7 +15,9 @@ export function handleSubmit(event) {
         polarity_confidence: data.polarity_confidence
       } )
     }).then(updateUI);
-   
+    } else {
+      alert('Url entered not valid. Please try again.')
+    }
 }
 
 
@@ -40,12 +42,12 @@ export function handleSubmit(event) {
     }
   };
 
-  // export function validURL(str) {
-  //   var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
-  //     '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
-  //     '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
-  //     '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
-  //     '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-  //     '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-  //   return !!pattern.test(str);
-  // }
+  export function validURL(str) {
+    var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+      '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+      '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+      '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+    return !!pattern.test(str);
+  }
