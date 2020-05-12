@@ -12,7 +12,7 @@ module.exports = {
     output: {
         libraryTarget: 'var',
         library: 'Client',
-        publicPath: "/build/",
+        // publicPath: "/build/",
     },
     optimization: {
         minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})]

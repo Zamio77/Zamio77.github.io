@@ -7,7 +7,7 @@ export function handleSubmit(event) {
       console.log('::: Data posted :::')
       // Check what text was put into the form field
       console.log("::: Form Submitted :::")
-      Client.postData('/sentiment', {text: formText}).then(function (data) {
+      Client.postData('http://localhost:8080/sentiment', {text: formText}).then(function (data) {
         Client.postData("http://localhost:8080/add", {
         text: formText,
         polarity: data.polarity,
