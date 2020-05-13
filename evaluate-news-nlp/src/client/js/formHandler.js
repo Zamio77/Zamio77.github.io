@@ -7,9 +7,10 @@ export function handleSubmit(event) {
       console.log('::: Data posted :::')
       // Check what text was put into the form field
       console.log("::: Form Submitted :::")
-      Client.postData('http://localhost:8080/sentiment', {text: formText}).then(function (data) {
+      Client.postData('http://localhost:8080/sentiment', {url: formText}).then(function (data) {
         Client.postData("http://localhost:8080/add", {
-        text: formText,
+        url: formText,
+        text: data.text,
         polarity: data.polarity,
         subjectivity: data.subjectivity,
         polarity_confidence: data.polarity_confidence
@@ -32,10 +33,11 @@ export function handleSubmit(event) {
     const request = await fetch("http://localhost:8080/all");
     try {
       const allData = await request.json();
-      document.getElementById("text").innerHTML = allData.text;
-      document.getElementById("polarity").innerHTML = allData.polarity;
-      document.getElementById("subjectivity").innerHTML = allData.subjectivity;
-      document.getElementById("polarity_confidence").innerHTML = allData.polarity_confidence;
+      document.getElementById("url").innerHTML = `Url: ${allData.url}`
+      document.getElementById("text").innerHTML = `Text: ${allData.text}`;
+      document.getElementById("polarity").innerHTML = `Polarity: ${allData.polarity}`;
+      document.getElementById("subjectivity").innerHTML = `Subjectivity: ${allData.subjectivity}`;
+      document.getElementById("polarity_confidence").innerHTML = `Plarity Confidence: ${allData.polarity_confidence}`;
 
     } catch (error) {
       console.log("error", error);
