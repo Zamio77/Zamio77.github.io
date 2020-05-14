@@ -1,7 +1,7 @@
-const postData = require('./postData');
+import { postData } from './postData'
 
 test('testing sidet data', () => {
-    expect(Client.postData('http://localhost:8080/sentiment', {url: "https://www.valentinog.com/blog/jest/"})).toBe({
+    expect(postData('http://localhost:8080/sentiment', {url: "https://www.valentinog.com/blog/jest/"})).resolves.toBe({
         "polarity":"positive",
         "subjectivity":"unkown",
         // "text":"John is a very good football player",
