@@ -27,6 +27,32 @@ Remember that once you clone, you will still need to install everything:
 `cd` into your new folder and run:
 - `npm install`
 
+## Initial Setup 
+
+```bash
+  git clone -- git@github.com:[your-user-name]/webpack-express.git --
+```
+`cd` int your new folder and run:
+
+* `npm install`
+* `npm i webpack webpack-cli`
+* `npm i -D @babel/core @babel/preset-env babel-loader`
+* `npm i -D @babel/core @babel/preset-env babel-loader`
+* `npm i -D html-webpack-plugin`
+* `npm i -D clean-webpack-plugin`
+* `npm i -D webpack-dev-server`
+* `npm i -D style-loader node-sass css-loader sass-loader`
+* `npm install workbox-webpack-plugin --save-dev`
+* `npm i dotenv`
+* `npm install aylien_textapi`
+* `npm fun build-dev or build-prod for either development or production mode`
+* `npm start` to start the app
+* this app runs on localhost:8080, but you can change the server port in server.js
+
+### Tips
+
+Remember don't try to make changes to files in the `dist` folder thinking they will make permanent updates to the site. All changes must be made to the uncompiled files for the site to be changed.
+
 ## Setting up the API
 
 The Aylien API is perhaps different than what you've used before. It has you install a node module to run certain commands through, it will simplify the requests we need to make from our node/express backend.
